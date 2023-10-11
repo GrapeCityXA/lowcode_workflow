@@ -1,0 +1,110 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "采购申请单ID",
+          "TestData": "20"
+        }
+      ],
+      "InvokeTriggerTestData": {
+        "UserName": "Administrator"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "采购内容",
+      "TableValue": {
+        "TableName": "采购申请单",
+        "OnlyGetValue": true,
+        "TableValueType": 0,
+        "BindingInfos": [
+          {
+            "BindingInfo": {
+              "TableName": "采购申请单",
+              "ColumnName": "采购内容",
+              "GUID": "72419856-d2f5-43c4-876e-00b188ee701f"
+            },
+            "ColumnName": "采购内容"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "采购申请单",
+            "ColumnName": "ID",
+            "GUID": "84180c32-b7d8-417d-bbc0-6615f9700294"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=采购申请单ID"
+          }
+        },
+        "TopCount": "1"
+      },
+      "ID": "dcd186f7a1734b7fb67469ed231ac117"
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=采购内容"
+              }
+            },
+            "value": "活字格",
+            "compareType": 10
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+              "ErrorCode": "0",
+              "CustomReturns": [
+                {
+                  "ReturnPropertyName": "当前申请单的采购负责人",
+                  "Value": "Kira（采购部）"
+                }
+              ]
+            }
+          ],
+          "ID": "e7b4d714-db02-4b9e-8315-a36183aec84f"
+        },
+        {
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+              "ErrorCode": "0",
+              "CustomReturns": [
+                {
+                  "ReturnPropertyName": "当前申请单的采购负责人",
+                  "Value": "Edward（采购部）,Kira（采购部）"
+                }
+              ]
+            }
+          ],
+          "ID": "1541fb7c-ea6d-4ee3-8b1c-f36d17524d40"
+        }
+      ]
+    }
+  ],
+  "ReturnProperties": [
+    {
+      "Name": "当前申请单的采购负责人"
+    }
+  ],
+  "Name": "确定采购负责人"
+}

@@ -1,0 +1,316 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "9": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "10": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "11": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "12": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      }
+    },
+    "Count": 13
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "13": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "15": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "26": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      },
+      "29": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "31": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "33": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "34": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "Count": 35
+  },
+  "Values": {
+    "2,29": "发起"
+  },
+  "AttachInfos": {
+    "1,1": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "ACT_RE_PROCDEF_View",
+        "RowIndex": 1,
+        "ColumnIndex": 1,
+        "ColumnCount": 33,
+        "RowCount": 11,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "表格1",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "ACT_RE_PROCDEF_View",
+            "ColumnName": "SUSPENSION_STATE_",
+            "GUID": "b1ccbcf4-2e77-4b4d-80de-763442acfe5f"
+          },
+          "Value": "1"
+        },
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_ListStyle2"
+      }
+    },
+    "2,1": {
+      "BindingInfo": {
+        "TableName": "ACT_RE_PROCDEF_View",
+        "ColumnName": "NAME_",
+        "GUID": "fefaa1d1-0054-47bb-8e4e-1c54611a6227"
+      }
+    },
+    "2,8": {
+      "BindingInfo": {
+        "TableName": "ACT_RE_PROCDEF_View",
+        "ColumnName": "DESCRIPTION_",
+        "GUID": "a4f1e69e-7669-4b89-8b97-df6b60f16449"
+      }
+    },
+    "2,21": {
+      "BindingInfo": {
+        "TableName": "ACT_RE_PROCDEF_View",
+        "ColumnName": "VERSION_",
+        "GUID": "09a4d407-93a1-40e5-a132-3012294deabf"
+      }
+    },
+    "2,25": {
+      "BindingInfo": {
+        "TableName": "ACT_RE_PROCDEF_View",
+        "ColumnName": "ID_",
+        "GUID": "9757ab17-2b89-40ad-8ea2-d61c1214456a"
+      }
+    },
+    "2,29": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ProcessStartCommand, ServerDesignerCommon",
+            "ProcessDefinitionId": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=FGC_流程列表!Z3"
+            },
+            "StartType": 1,
+            "ReturnResultName": "发起流程结果"
+          },
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "FGC_任务详情",
+            "PassValues": []
+          }
+        ],
+        "Text": "发起",
+        "TemplateKey": "流程样式3"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "FontWeight": 1,
+        "Foreground": 2,
+        "TextIndent": 20,
+        "HorizontalAlignment": 3
+      },
+      {
+        "Background": 0,
+        "FontFamily": 4,
+        "FontWeight": 1,
+        "Foreground": 2,
+        "TextIndent": 20,
+        "HorizontalAlignment": 3
+      },
+      {
+        "Background": 0,
+        "FontFamily": 4,
+        "FontWeight": 1,
+        "Foreground": 2,
+        "Formatter": 5
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332,
+        "Foreground": 6,
+        "TextIndent": 20,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332,
+        "Foreground": 6,
+        "TextIndent": 24,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "HorizontalAlignment": 7
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "Foreground": 6,
+        "TextIndent": 20,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332,
+        "HorizontalAlignment": 7
+      },
+      {
+        "FontFamily": 4,
+        "HorizontalAlignment": 7
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "#FFF3F9FC",
+        "Bold",
+        "Text 1 50",
+        "Left",
+        "Body",
+        "[AUTO]General",
+        "Text 1 25",
+        "Center"
+      ]
+    },
+    "CellStyles": {
+      "1,1": 0,
+      "1,8": 1,
+      "1,21": 1,
+      "1,25": 0,
+      "1,29": 2,
+      "2,1": 3,
+      "2,8": 4,
+      "2,21": 5,
+      "2,25": 6,
+      "2,29": 7,
+      "2,30": 8
+    },
+    "SheetStyle": {
+      "FontFamily": 4
+    }
+  },
+  "Spans": [
+    "2,1,1,7",
+    "2,8,1,13",
+    "2,25,1,4",
+    "2,29,1,5",
+    "3,1,9,33",
+    "2,21,1,4",
+    "1,1,1,7",
+    "1,8,1,13",
+    "1,21,1,4",
+    "1,25,1,4",
+    "1,29,1,5"
+  ],
+  "BackgroundPictures": [
+    {
+      "DisplayName": "背景图2",
+      "StyleInfo": {
+        "Fill": "Background 1 0"
+      },
+      "IsAutomaticFill": false,
+      "Name": "c3a8fc72-193c-4702-a440-991205d3aa4c.png",
+      "Location": "20,0",
+      "Size": "600,290"
+    }
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "Title": "流程列表",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "RelatedDataTableName": "ACT_RE_PROCDEF_View"
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//Vcjd/vgOGKofrGwaZwPlH0+oapxa0cfZ5cnAXt69S4aa+1VEf7oy2c8dUSZN16xNGkJvtCaU9HSCtCwWlNAzoDdow0S4Ggp4ge2FK/kQH6TUHAkEM5r59KaUQST0dfK2b0iA2EZmFWK+W3YtOL6IrLsMloMoOr7lFW5prXzN+4lVWiCntsco1fo1HIENo7/sTQMnOjUYjBtrIORRswVp8JDYLhcgC0BWCb2jSiX/qUsSXiRk/Yi5S3ckw9ujGbhR+ocCQwbhUYQyYebgz5DQsNCoxirn2Hr+0IloEiPgr6QEtJao6myQXpSlDSALfYSIorL9TmY5iG90e6Owpes6omSl6qFM6U58aR3IOo4aKiwIrlHS7n+xdnYw8fWTOlF0d+ogC7FKNfNH7EYo81qzXWIPginiyqiPXfwMO4kOoefm4jqa05695o1ONJbLGdMGGiXleLBZffDjKYcSkcSDMY4SddMLZe6sAQuZhqseuzRqWLfn9nSzPGu/qddSGvWfgevyqdj/jK/7CN+iGnlAokwQc3v7Y1Bu2ZY2MwaApk1H8bgOfTJ7C297vCfiN077UaqUNk9kBU0C0v3J2FkFAwa+/gQErn7NSHc3NbVGj98qm2s4a9Cys10tL1koj9yydqRiH01NxRJ4KYpAuqjsmM8kmEayEPlCUUFrpyJWZ04Vry/MFUqv3DY9UVFut2mrjLL898Dh7BjXrJN8qx+LQgAhGKnv88cz9L9EAvpyzdHCBVS1f9JBCtzNIZbPXy19LoSBW5vMKDHy7Cji5u1L2ndWsYfh7ua9LIgeDBDPySrK1WfNJNjRF5xuKnNg4UXVG/U61dRpj2Z3nIoKKqMt8n0neFXbWFayUzDen2rAxkuCNTQVUqiijCPR96AmxRu8U+lNXhkLFL9WWWLYm+mR4g==|920

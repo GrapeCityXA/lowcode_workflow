@@ -1,0 +1,276 @@
+[
+  {
+    "ModuleName": "Tables/流程表文件夹",
+    "ModuleType": 22
+  },
+  {
+    "ModuleName": "TableProcessView/ACT_HI_COMMENT_View",
+    "ModuleType": 30
+  },
+  {
+    "ModuleName": "TableProcessView/ACT_HI_PROCINST_View",
+    "ModuleType": 30
+  },
+  {
+    "ModuleName": "TableProcessView/ACT_HI_TASKINST_View",
+    "ModuleType": 30
+  },
+  {
+    "ModuleName": "TableProcessView/ACT_RE_PROCDEF_View",
+    "ModuleType": 30
+  },
+  {
+    "ModuleName": "TableProcessView/ACT_RU_TASK_View",
+    "ModuleType": 30
+  },
+  {
+    "ModuleName": "Table/供应商",
+    "ModuleType": 7
+  },
+  {
+    "ModuleName": "TableView/流程执行耗时",
+    "ModuleType": 23
+  },
+  {
+    "ModuleName": "TableView/用户信息视图",
+    "ModuleType": 23,
+    "ExclusiveType": 0
+  },
+  {
+    "ModuleName": "Table/费用中心",
+    "ModuleType": 7
+  },
+  {
+    "ModuleName": "Table/采购申请单",
+    "State": 1,
+    "LockedBy": {
+      "UserName": "XA-GCSCN-NING\\admin",
+      "Email": "will.ning@grapecity.com"
+    },
+    "LockDateTime": "2022-11-23T15:04:36.2477427+08:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\采购申请单.json"
+    ]
+  },
+  {
+    "ModuleName": "Pages/内建手机页面",
+    "ModuleType": 6
+  },
+  {
+    "ModuleName": "MobilePage/FGC_401页面_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_两步验证_扫码页面_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_两步验证_验证页面_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_修改密码_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_修改用户信息_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_忘记密码_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_登录_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_维护中_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_邮件订阅_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_重置密码_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_重置密码发送邮件成功_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "Pages/内建页面",
+    "ModuleType": 6
+  },
+  {
+    "ModuleName": "PCPage/FGC_401页面",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_两步验证_扫码页面",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_两步验证_验证页面",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_修改密码",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_修改用户信息",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_忘记密码",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_登录",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_维护中",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_邮件订阅",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_重置密码",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_重置密码发送邮件成功",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "Pages/流程页面文件夹",
+    "ModuleType": 6
+  },
+  {
+    "ModuleName": "PCPage/FGC_任务详情",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_审批记录",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_我发起的",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_我的已办",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_我的待办",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_流程列表",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/创建采购单",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/查看采购单",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/流程KPI",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/采购单流程-采购部填写",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/采购申请单管理",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "MasterPages/流程母版页面文件夹",
+    "ModuleType": 24
+  },
+  {
+    "ModuleName": "MasterPCPage/FGC_流程中心_母版页",
+    "ModuleType": 3
+  },
+  {
+    "ModuleName": "MasterPCPage/FGC_母版页",
+    "ModuleType": 3
+  },
+  {
+    "ModuleName": "ServerCommand/回写采购申请单审批状态",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommandPrivate/清空数据",
+    "ModuleType": 27
+  },
+  {
+    "ModuleName": "ServerCommand/确定采购负责人",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/自定义审批操作",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/通过邮件推送通知",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ProcessItem/维修现场登记流程",
+    "ModuleType": 28
+  },
+  {
+    "ModuleName": "ProcessItem/采购申请流程",
+    "ModuleType": 28
+  },
+  {
+    "ModuleName": "ApplicationSetting",
+    "ModuleType": 8
+  },
+  {
+    "ModuleName": "Theme",
+    "ModuleType": 9
+  },
+  {
+    "ModuleName": "ImageSelector",
+    "ModuleType": 10
+  },
+  {
+    "ModuleName": "UserService",
+    "ModuleType": 11
+  },
+  {
+    "ModuleName": "CustomLibrary",
+    "ModuleType": 12
+  },
+  {
+    "ModuleName": "ShareCommand",
+    "ModuleType": 13
+  },
+  {
+    "ModuleName": "MapJsonFile",
+    "ModuleType": 14
+  },
+  {
+    "ModuleName": "DataContectionSet",
+    "ModuleType": 25
+  },
+  {
+    "ModuleName": "Upload",
+    "ModuleType": 26
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "收件人"
+        },
+        {
+          "Name": "内容"
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "From": "hzg.study@grapecity.com",
+      "Subject": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=\"【工作流Demo】\"&内容"
+      },
+      "Content": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=内容"
+      },
+      "EnhancedRecipient": {
+        "TableName": "用户信息视图",
+        "TableColumn": {
+          "TableName": "用户信息视图",
+          "ColumnName": "邮件",
+          "GUID": "0b41ccda-70ee-45c5-873b-0644df69c3f8"
+        },
+        "QueryCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "用户信息视图",
+            "ColumnName": "用户名",
+            "GUID": "231d5910-ec2d-4326-94ed-c43175f5382f"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=收件人"
+          }
+        },
+        "IsMultiRecipient": true
+      },
+      "ID": "af7e5bd70c43493f942c458ffbf4d85f"
+    }
+  ],
+  "Name": "通过邮件推送通知"
+}

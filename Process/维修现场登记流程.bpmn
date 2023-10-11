@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:fgc="http://www.forguncy.com/schema/bpmn/1.0" xmlns:activiti="http://activiti.org/bpmn" id="_acb6c175-a12e-40d0-a288-e26783b0e1ac" name="BPMN Model" targetNamespace="http://www.forguncy.com/schema/bpmn/1.0" expressionLanguage="https://www.ecma-international.org/publications/standards/Ecma-334.htm">
+  <extension/>
+  <process id="_ed7bedac-4f42-49e0-9cfc-e4f88363ef17" isExecutable="true">
+    <documentation>修改操作名称</documentation>
+    <extensionElements>
+      <fgc:ForguncyExtension Properties="{&quot;variableSetting&quot;:{&quot;variables&quot;:[]},&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:100,&quot;commands&quot;:[]},{&quot;id&quot;:&quot;1&quot;,&quot;enable&quot;:true,&quot;event&quot;:101,&quot;commands&quot;:[]},{&quot;id&quot;:&quot;2&quot;,&quot;enable&quot;:true,&quot;event&quot;:102,&quot;commands&quot;:[]}]},&quot;timeoutSetting&quot;:{&quot;deadlines&quot;:[]},&quot;tables&quot;:[]}"/>
+    </extensionElements>
+    <startEvent id="_25a54993-00c3-43a5-8676-cb4b79bf1d0e" name="开始">
+      <extensionElements>
+        <fgc:ForguncyExtension Properties="{&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:401,&quot;commands&quot;:[]}]},&quot;variableSetting&quot;:{&quot;variables&quot;:[]}}"/>
+      </extensionElements>
+      <outgoing>_8ae538e2-d182-48f9-b257-474809e54cf4</outgoing>
+    </startEvent>
+    <userTask id="_5113ab1e-a6b3-4da6-b64e-77cab7928c7e" name="进场打卡" activiti:formKey="${formKeyResolver.getFormKey(execution)}" activiti:assignee="${FGC_activitiAssignee}">
+      <extensionElements>
+        <fgc:ForguncyExtension xmlns:fgc="http://www.forguncy.com/schema/bpmn/1.0" Properties="{&quot;generalSetting&quot;:{&quot;tables&quot;:[],&quot;actions&quot;:[{&quot;key&quot;:&quot;1658475151734-b5d5039f&quot;,&quot;type&quot;:100,&quot;enable&quot;:true,&quot;remarks&quot;:[{&quot;key&quot;:1,&quot;enable&quot;:false}],&quot;commitOption&quot;:{&quot;autoSave&quot;:false},&quot;title&quot;:&quot;进场&quot;}]},&quot;userSetting&quot;:{&quot;assigneeSettings&quot;:[{&quot;key&quot;:&quot;1641910702820&quot;,&quot;type&quot;:1,&quot;value&quot;:{&quot;valueType&quot;:1,&quot;fixedValue&quot;:&quot;%Process.Starter%&quot;},&quot;enable&quot;:true}],&quot;assigneeTarget&quot;:2,&quot;isMultiple&quot;:true,&quot;isCountersign&quot;:false,&quot;autoCommitStrategies&quot;:[{&quot;status&quot;:1},{&quot;status&quot;:2},{&quot;status&quot;:3}],&quot;nobodyAssignStrategy&quot;:{&quot;status&quot;:1}},&quot;dataSetting&quot;:{&quot;tablePermissions&quot;:[]},&quot;timeoutSetting&quot;:{&quot;deadlines&quot;:[]},&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;1658475151734-7913cf2b&quot;,&quot;index&quot;:0,&quot;enable&quot;:true,&quot;event&quot;:400,&quot;commands&quot;:[]},{&quot;id&quot;:1,&quot;index&quot;:1,&quot;enable&quot;:true,&quot;event&quot;:300,&quot;commands&quot;:[]},{&quot;id&quot;:2,&quot;index&quot;:2,&quot;enable&quot;:true,&quot;event&quot;:302,&quot;commands&quot;:[]}]},&quot;variableSetting&quot;:{&quot;variables&quot;:[]}}"/>
+      </extensionElements>
+      <incoming>_8ae538e2-d182-48f9-b257-474809e54cf4</incoming>
+      <outgoing>Flow_088u9y2</outgoing>
+      <multiInstanceLoopCharacteristics  activiti:collection="${userTaskResolver.getCollection(execution)}" activiti:elementVariable="FGC_activitiAssignee"><completionCondition>${nrOfCompletedInstances &gt; 0}</completionCondition></multiInstanceLoopCharacteristics>
+    </userTask>
+    <userTask id="_6cc4b202-afed-41aa-84bc-279cb5e01a9e" name="出场打卡" activiti:formKey="${formKeyResolver.getFormKey(execution)}" activiti:assignee="${FGC_activitiAssignee}">
+      <extensionElements>
+        <fgc:ForguncyExtension xmlns:fgc="http://www.forguncy.com/schema/bpmn/1.0" Properties="{&quot;generalSetting&quot;:{&quot;tables&quot;:[],&quot;actions&quot;:[{&quot;key&quot;:&quot;1658475190395-576a5f3a&quot;,&quot;type&quot;:100,&quot;enable&quot;:true,&quot;remarks&quot;:[{&quot;key&quot;:1,&quot;enable&quot;:false}],&quot;title&quot;:&quot;出场&quot;,&quot;commitOption&quot;:{}}]},&quot;userSetting&quot;:{&quot;assigneeSettings&quot;:[{&quot;key&quot;:&quot;1658475252060-3304da49&quot;,&quot;type&quot;:1,&quot;value&quot;:{&quot;valueType&quot;:1,&quot;fixedValue&quot;:&quot;%Process.Starter%&quot;},&quot;enable&quot;:true}],&quot;assigneeTarget&quot;:2,&quot;isMultiple&quot;:true,&quot;isCountersign&quot;:false,&quot;autoCommitStrategies&quot;:[{&quot;status&quot;:1},{&quot;status&quot;:2},{&quot;status&quot;:3}],&quot;nobodyAssignStrategy&quot;:{&quot;status&quot;:1}},&quot;dataSetting&quot;:{&quot;tablePermissions&quot;:[]},&quot;timeoutSetting&quot;:{&quot;deadlines&quot;:[]},&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;1658475190395-4f6a6e80&quot;,&quot;index&quot;:0,&quot;enable&quot;:true,&quot;event&quot;:400,&quot;commands&quot;:[]},{&quot;id&quot;:1,&quot;index&quot;:1,&quot;enable&quot;:true,&quot;event&quot;:300,&quot;commands&quot;:[]},{&quot;id&quot;:2,&quot;index&quot;:2,&quot;enable&quot;:true,&quot;event&quot;:302,&quot;commands&quot;:[]}]},&quot;variableSetting&quot;:{&quot;variables&quot;:[]}}"/>
+      </extensionElements>
+      <incoming>Flow_191641e</incoming>
+      <outgoing>_8c741911-d69b-4864-a869-a7ec74699301</outgoing>
+      <multiInstanceLoopCharacteristics  activiti:collection="${userTaskResolver.getCollection(execution)}" activiti:elementVariable="FGC_activitiAssignee"><completionCondition>${nrOfCompletedInstances &gt; 0}</completionCondition></multiInstanceLoopCharacteristics>
+    </userTask>
+    <endEvent id="_835bef84-abdc-467c-b715-6e5f3de41f6d" name="结束">
+      <extensionElements>
+        <fgc:ForguncyExtension Properties="{&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:400,&quot;commands&quot;:[]}]},&quot;variableSetting&quot;:{&quot;variables&quot;:[]}}"/>
+      </extensionElements>
+      <incoming>_8c741911-d69b-4864-a869-a7ec74699301</incoming>
+    </endEvent>
+    <sequenceFlow id="_8ae538e2-d182-48f9-b257-474809e54cf4" name="" sourceRef="_25a54993-00c3-43a5-8676-cb4b79bf1d0e" targetRef="_5113ab1e-a6b3-4da6-b64e-77cab7928c7e">
+      <extensionElements>
+        <fgc:ForguncyExtension Properties="{&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:200,&quot;commands&quot;:[]}]},&quot;sequenceProperty&quot;:{}}"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="_8c741911-d69b-4864-a869-a7ec74699301" name="" sourceRef="_6cc4b202-afed-41aa-84bc-279cb5e01a9e" targetRef="_835bef84-abdc-467c-b715-6e5f3de41f6d">
+      <extensionElements>
+        <fgc:ForguncyExtension Properties="{&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:200,&quot;commands&quot;:[]}]},&quot;sequenceProperty&quot;:{}}"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_088u9y2" sourceRef="_5113ab1e-a6b3-4da6-b64e-77cab7928c7e" targetRef="Gateway_0tg7xva">
+      <extensionElements>
+        <fgc:ForguncyExtension Properties="{&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:200,&quot;commands&quot;:[]}]},&quot;sequenceProperty&quot;:{}}"/>
+      </extensionElements>
+    </sequenceFlow>
+    <exclusiveGateway id="Gateway_0tg7xva">
+      <incoming>Flow_088u9y2</incoming>
+      <outgoing>Flow_191641e</outgoing>
+    </exclusiveGateway>
+    <sequenceFlow id="Flow_191641e" sourceRef="Gateway_0tg7xva" targetRef="_6cc4b202-afed-41aa-84bc-279cb5e01a9e">
+      <extensionElements>
+        <fgc:ForguncyExtension Properties="{&quot;eventSetting&quot;:{&quot;eventHandlers&quot;:[{&quot;id&quot;:&quot;0&quot;,&quot;enable&quot;:true,&quot;event&quot;:200,&quot;commands&quot;:[]}]},&quot;sequenceProperty&quot;:{}}"/>
+      </extensionElements>
+    </sequenceFlow>
+  </process>
+  <BPMNDiagram xmlns="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="_8ee41418-b6de-48fb-9f68-6e4724d56368" name="" resolution="96">
+    <BPMNPlane bpmnElement="_ed7bedac-4f42-49e0-9cfc-e4f88363ef17">
+      <BPMNEdge id="Flow_191641e_di" bpmnElement="Flow_191641e" color:border-color="rgb(172, 172, 172)" color:background-color="rgb(172, 172, 172)">
+        <di:waypoint x="415" y="10"/>
+        <di:waypoint x="460" y="10"/>
+      </BPMNEdge>
+      <BPMNEdge id="Flow_088u9y2_di" bpmnElement="Flow_088u9y2" color:border-color="rgb(172, 172, 172)" color:background-color="rgb(172, 172, 172)">
+        <di:waypoint x="320" y="10"/>
+        <di:waypoint x="365" y="10"/>
+      </BPMNEdge>
+      <BPMNEdge id="_3ccecb06-393a-447c-8f09-f0ea0d3f2deb" bpmnElement="_8c741911-d69b-4864-a869-a7ec74699301" color:border-color="rgb(172, 172, 172)" color:background-color="rgb(172, 172, 172)">
+        <di:waypoint x="580" y="10"/>
+        <di:waypoint x="700" y="10"/>
+      </BPMNEdge>
+      <BPMNEdge id="_044ce26e-bc81-468d-8ef2-d1b90f17398b" bpmnElement="_8ae538e2-d182-48f9-b257-474809e54cf4" color:border-color="rgb(172, 172, 172)" color:background-color="rgb(172, 172, 172)">
+        <di:waypoint x="80" y="10"/>
+        <di:waypoint x="200" y="10"/>
+      </BPMNEdge>
+      <BPMNShape id="_596c6fc0-8dbf-4090-a0ff-983976feacd6" bpmnElement="_25a54993-00c3-43a5-8676-cb4b79bf1d0e" isHorizontal="false" isExpanded="false" isMarkerVisible="false" isMessageVisible="false">
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="40" y="-10" width="40" height="40"/>
+        <BPMNLabel>
+          <dc:Bounds x="47" y="37" width="26" height="16"/>
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="_3be9102e-3e02-4d78-8046-2ab643faef40" bpmnElement="_5113ab1e-a6b3-4da6-b64e-77cab7928c7e" isHorizontal="false" isExpanded="false" isMarkerVisible="false" isMessageVisible="false">
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="200" y="-10" width="120" height="40"/>
+      </BPMNShape>
+      <BPMNShape id="_12a4b71a-cbe6-4943-842b-31d44e3681fa" bpmnElement="_6cc4b202-afed-41aa-84bc-279cb5e01a9e" isHorizontal="false" isExpanded="false" isMarkerVisible="false" isMessageVisible="false">
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="460" y="-10" width="120" height="40"/>
+      </BPMNShape>
+      <BPMNShape id="_deffb0ff-e0e9-428a-8e2a-8481eac956bd" bpmnElement="_835bef84-abdc-467c-b715-6e5f3de41f6d" isHorizontal="false" isExpanded="false" isMarkerVisible="false" isMessageVisible="false">
+        <Bounds xmlns="http://www.omg.org/spec/DD/20100524/DC" x="700" y="-10" width="40" height="40"/>
+        <BPMNLabel>
+          <dc:Bounds x="707" y="37" width="26" height="16"/>
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="Gateway_0tg7xva_di" bpmnElement="Gateway_0tg7xva" isMarkerVisible="true">
+        <dc:Bounds x="365" y="-15" width="50" height="50"/>
+      </BPMNShape>
+    </BPMNPlane>
+  </BPMNDiagram>
+</definitions>

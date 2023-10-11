@@ -1,0 +1,270 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "15": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 32
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "24": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 55
+  },
+  "Values": {
+    "1,5": "工作流演示 Demo",
+    "2,25": "前往维修",
+    "2,30": "流程中心",
+    "2,35": "流程优化"
+  },
+  "AttachInfos": {
+    "1,40": {
+      "CellType": {
+        "$type": "Forguncy.CurrentUserCellType, ServerDesignerCommon",
+        "CellCustomValue": "%CurrentUser%",
+        "ShowCircleUserPicture": true,
+        "NavigatePageNameForNotification": "FGC_我的待办",
+        "NavigateSettingWhenLogout": {
+          "NavigateWhenLogoutMode": 1
+        }
+      }
+    },
+    "2,25": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ProcessStartCommand, ServerDesignerCommon",
+            "ProcessDefinitionResourceName": "维修现场登记流程",
+            "ReturnResultName": "发起流程结果"
+          },
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "FGC_我的待办",
+            "PassValues": []
+          }
+        ],
+        "Text": "前往维修",
+        "ClickMode": 1
+      }
+    },
+    "2,30": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "FGC_我的待办",
+            "PassValues": [],
+            "IsOpenInNewTab": true
+          }
+        ],
+        "Text": "流程中心",
+        "ClickMode": 1
+      }
+    },
+    "2,35": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "流程KPI",
+            "PassValues": [],
+            "IsOpenInNewTab": true
+          }
+        ],
+        "Text": "流程优化",
+        "ClickMode": 1
+      }
+    },
+    "5,4": {
+      "IsPlaceHolderCell": true
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0,
+        "Underline": false,
+        "Strikethrough": false,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 21.333333333333332,
+        "Foreground": 1,
+        "Underline": false,
+        "Strikethrough": false,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 1,
+        "Underline": false,
+        "Strikethrough": false,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Foreground": 1,
+        "HorizontalAlignment": 2,
+        "Underline": true
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 1,
+        "HorizontalAlignment": 2,
+        "Underline": true,
+        "Strikethrough": false,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "Background 1 0",
+        "Center"
+      ]
+    },
+    "CellStyles": {
+      "0,4": 0,
+      "0,5": 0,
+      "0,6": 0,
+      "0,7": 0,
+      "0,8": 0,
+      "0,9": 0,
+      "0,10": 0,
+      "0,11": 0,
+      "0,12": 0,
+      "0,13": 0,
+      "0,14": 0,
+      "0,15": 0,
+      "0,16": 0,
+      "0,17": 0,
+      "0,18": 0,
+      "0,19": 0,
+      "0,20": 0,
+      "0,21": 0,
+      "0,22": 0,
+      "0,23": 0,
+      "0,24": 0,
+      "0,25": 0,
+      "0,26": 0,
+      "0,27": 0,
+      "0,28": 0,
+      "0,29": 0,
+      "0,30": 0,
+      "0,31": 0,
+      "0,32": 0,
+      "0,33": 0,
+      "0,34": 0,
+      "0,35": 0,
+      "0,36": 0,
+      "0,37": 0,
+      "0,38": 0,
+      "0,39": 0,
+      "0,40": 0,
+      "0,41": 0,
+      "0,42": 0,
+      "0,43": 0,
+      "0,44": 0,
+      "0,45": 0,
+      "0,46": 0,
+      "0,47": 0,
+      "0,48": 0,
+      "0,49": 0,
+      "0,50": 0,
+      "1,5": 1,
+      "1,40": 2,
+      "2,25": 3,
+      "2,30": 4,
+      "2,31": 0,
+      "2,32": 0,
+      "2,33": 0,
+      "2,35": 4,
+      "4,40": 2,
+      "4,41": 2,
+      "4,42": 2,
+      "4,43": 2,
+      "4,44": 2,
+      "4,45": 2,
+      "4,46": 2,
+      "4,47": 2,
+      "4,48": 2,
+      "4,49": 2,
+      "4,50": 2
+    },
+    "SheetStyle": {
+      "FontFamily": 0,
+      "Underline": false,
+      "Strikethrough": false,
+      "BorderBottom": null,
+      "BorderTop": null,
+      "BorderLeft": null,
+      "BorderRight": null
+    }
+  },
+  "Spans": [
+    "1,5,3,10",
+    "1,40,3,11",
+    "2,30,1,4",
+    "2,35,1,4",
+    "5,4,26,47",
+    "2,25,1,4"
+  ],
+  "BackgroundPictures": [
+    {
+      "DisplayName": "背景图1",
+      "StyleInfo": {
+        "Fill": "Accent 1 0"
+      },
+      "IsAutomaticFill": false,
+      "Name": "c991cb2e-8e6d-4a74-8a4e-b551fc03ed14",
+      "Location": "80,8",
+      "Size": "940,83"
+    }
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.MasterPage, ServerDesignerCommon",
+    "PageLoadedCommandList": [],
+    "IsBuiltInPage": true
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//JmQ7BQRm54fE1YKG7xbpIn7CIblAAccM0Cpz/imvSNuRs8OSufhVf0oX1BC92CrDixdrf2D5rQAfLbO3J+QyFJ8Rz8HTgPZc8iHbLLpWfTsqRLQPoese0M0pyuNOPVnN5HcliPx7luIhguvBiBlONdOIHiIzDy247PY8FJ64T0eWO8OFMxWxUdawCPjUgPR6339166nhlfI6dYIsxW+vhXwqqOuDZVoLQsvPhaWgRpI9W2FMZY5cS0wLLXjafAswjtQ1MY4gWPSaLOj/S6+BWU0N1QiGM8VdazImsZNoXp/wKH4cBCeqlXSqoibzSF5LZaEbs7SUaz/N/FhWaHkgYPKO3EcD/rVOt3y+fbiUxP6i02+5s1nFIXqqCz7eF7AGO1bVcGqiU2cqVAZgQF+Cvqd9rBbVxfOwXCVSwSKBckfCuOVGJEm58ra/pMzVPGRW+3obQnqc05KpcXN9DZ0e11sTg14Z8g8dWJ+LyNdIiG+aW+FNOtG1OgrL9OgMEOdx6x9Q+94Vk265sBC6YSb4Btnm81Dl+s/9nJv+vvZdKALZWVjgAPacXco5WNXXLNtXW07zXF7Kaq0qgus7PADFIsQEuVNfAUxScKe82jS52BJkQlyfP2+VCIG+4sWxCS7CbKOQ+fWUqCae+K8NI47VnRzwdybO1+M4RmeVLjd0Yh8T84K9VdW/AqHT1gaQcBATdFbIKgilL7taGfq/MONjconF/D0N1s+dk0lpd/jtp4oBtrBow8BeQEkxdIVNllgpfOwZudgm1dPqPTHR+s7K0eqWwj1wyy0vwIN6mUuG1vI0ujVdYGzGL2vt/KFcrTkRgXZl4C/wBrEou86tvUcGMD0P5zH7RajV0uOeF1YWdTsecassbjY/4AuaBt6AwCCizpiE1Jz7cvFuQTXXzVSdRw==|920

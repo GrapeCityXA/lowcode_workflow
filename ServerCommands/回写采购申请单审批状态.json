@@ -1,0 +1,250 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "采购申请单ID"
+        },
+        {
+          "Name": "是否顺利完成"
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+            "Condition1": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                "ParamObject": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=是否顺利完成"
+                }
+              },
+              "value": "1"
+            },
+            "Condition2": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                "ParamObject": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=UPPER(是否顺利完成)"
+                }
+              },
+              "value": "TRUE"
+            },
+            "RelationType": 1
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+              "TableName": "采购申请单",
+              "ShowConfirm": false,
+              "ConfirmText": "您确定要更新这行记录吗？",
+              "RowsToUpdate": 1,
+              "RowsToUpdateCondition": {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "采购申请单",
+                  "ColumnName": "ID",
+                  "GUID": "3090cb9e-bcf6-4e57-b237-b0cad0fd84fb"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=采购申请单ID"
+                }
+              },
+              "UpdateBindingValues": [
+                {
+                  "BindingInfo": {
+                    "TableName": "采购申请单",
+                    "ColumnName": "审批通过时间",
+                    "GUID": "9a0a29dd-134d-42cd-b13c-ed6678fe041c"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=NOW()"
+                  }
+                }
+              ]
+            }
+          ],
+          "ID": "5379bd78-c6ee-4679-9b86-7ada763264b6"
+        },
+        {
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+              "TableName": "采购申请单",
+              "ShowConfirm": false,
+              "ConfirmText": "您确定要更新这行记录吗？",
+              "RowsToUpdate": 1,
+              "RowsToUpdateCondition": {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "采购申请单",
+                  "ColumnName": "ID",
+                  "GUID": "d6cb5be5-1f92-4a53-a80c-2797825681a7"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=采购申请单ID"
+                }
+              },
+              "UpdateBindingValues": [
+                {
+                  "BindingInfo": {
+                    "TableName": "采购申请单",
+                    "ColumnName": "审批拒绝时间",
+                    "GUID": "4ddd8094-de91-41df-8c3d-996a67d52428"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=NOW()"
+                  }
+                }
+              ]
+            }
+          ],
+          "ID": "5299b81d-ff77-4ab6-aadd-abcbaae9b8ef"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "采购申请单的相关人",
+      "TableValue": {
+        "TableName": "采购申请单",
+        "TableValueType": 1,
+        "BindingInfos": [
+          {
+            "BindingInfo": {
+              "TableName": "采购申请单",
+              "ColumnName": "申请人",
+              "GUID": "2b5242a2-4652-471f-9ec7-483a54e9075e"
+            },
+            "ColumnName": "申请人"
+          },
+          {
+            "BindingInfo": {
+              "TableName": "采购申请单",
+              "ColumnName": "FGC_Creator",
+              "GUID": "aef5a87b-3f3a-4d1d-a836-68496d3825ad"
+            },
+            "ColumnName": "创建者"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "采购申请单",
+            "ColumnName": "ID",
+            "GUID": "6cf53ebd-6279-49f5-bf84-8cce78aa41cd"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=采购申请单ID"
+          }
+        },
+        "TopCount": "1"
+      },
+      "ID": "938c8a3301d54da5ae3a75e26d5a596e"
+    },
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "From": "hzg.study@grapecity.com",
+      "Subject": "您申请的采购单审批流程已结束",
+      "Content": "您提交的采购单审批流程已结束，请登录系统查看审批结果。",
+      "EnhancedRecipient": {
+        "TableName": "用户信息视图",
+        "TableColumn": {
+          "TableName": "用户信息视图",
+          "ColumnName": "邮件",
+          "GUID": "41aa8b8d-f12d-4f5f-b495-366756badaf1"
+        },
+        "QueryCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "用户信息视图",
+            "ColumnName": "用户名",
+            "GUID": "588db98d-c9bf-4092-93b5-6a62db436ca9"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=采购申请单的相关人.申请人"
+          }
+        },
+        "IsMultiRecipient": true
+      },
+      "ID": "656615398b454ba48a036b6123522d39"
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=采购申请单的相关人.申请人"
+              }
+            },
+            "value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=采购申请单的相关人.创建者"
+            },
+            "compareType": 1
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+              "From": "hzg.study@grapecity.com",
+              "Subject": "您为他人创建的采购单审批流程已结束",
+              "Content": "您为他人创建的采购单审批流程已结束，请登录系统查看审批结果。",
+              "EnhancedRecipient": {
+                "TableName": "用户信息视图",
+                "TableColumn": {
+                  "TableName": "用户信息视图",
+                  "ColumnName": "邮件",
+                  "GUID": "91db14f3-64ab-40b9-a0bd-504bc3ce1954"
+                },
+                "QueryCondition": {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "用户信息视图",
+                    "ColumnName": "用户名",
+                    "GUID": "a01f95af-5c95-4e88-9b44-12bcf46110b9"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=采购申请单的相关人.创建者"
+                  }
+                },
+                "IsMultiRecipient": true
+              },
+              "ID": "2bcd76a1c002488986bcc3db3df2dad7"
+            }
+          ],
+          "ID": "8a33b123-b6b6-4610-802e-20b0c0e42110"
+        }
+      ]
+    }
+  ],
+  "Name": "回写采购申请单审批状态"
+}

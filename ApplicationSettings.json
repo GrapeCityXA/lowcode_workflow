@@ -1,0 +1,13 @@
+{
+  "IntegrateWithOtherApplication": {
+    "Password": "oAQ9HIB9nwy0"
+  },
+  "WebSitePort": 19458,
+  "UserServicePort": 23268,
+  "BpmServerSchemaId": "3b5ea310-1c9b-481f-be55-dfa570d6f6a4",
+  "ProcessDataConnectionSet": {
+    "ExternalDatabaseId": "MySql1"
+  },
+  "NotAllowQueryDatabaseByJsApi": false,
+  "StartDateFiscalYear": 1
+}

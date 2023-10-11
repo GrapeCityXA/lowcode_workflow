@@ -1,0 +1,7 @@
+[
+  {
+    "ConnectionString": "Server=localhost;User ID=root;Password=xA123456;Database=workflow_demo;Port=3306",
+    "DataBaseType": 6,
+    "ID": "MySql1"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "流程实例ID"
+        },
+        {
+          "Name": "操作"
+        }
+      ]
+    }
+  ],
+  "Name": "自定义审批操作"
+}

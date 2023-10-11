@@ -1,0 +1,72 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.InvokeTrigger, ServerDesignerCommon",
+      "InvokeTriggerTestData": {
+        "UserName": "Administrator"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+      "TableName": "采购申请单",
+      "UpdateType": "delete",
+      "ShowConfirm": true,
+      "ConfirmText": "您确定要删除吗？",
+      "RowsToUpdate": 1,
+      "RowsToUpdateCondition": {
+        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+        "CompareType": 2,
+        "ColumnBindingInfo": {
+          "TableName": "采购申请单",
+          "ColumnName": "ID",
+          "GUID": "4dba871d-1238-4e6e-a6dc-089d47260a8f"
+        },
+        "Value": "0"
+      },
+      "UpdateBindingValues": []
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "所有流程实例",
+      "TableValue": {
+        "TableName": "ACT_HI_PROCINST_View",
+        "BindingInfos": [
+          {
+            "BindingInfo": {
+              "TableName": "ACT_HI_PROCINST_View",
+              "ColumnName": "ID_",
+              "GUID": "8eb147e2-57b3-4340-bbcb-415171d57e34"
+            },
+            "ColumnName": "ID"
+          }
+        ]
+      },
+      "ID": "de1f40cab7724f3bad8981291737e20e"
+    },
+    {
+      "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+      "LoopInfo": {
+        "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+        "LoopCount": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=所有流程实例"
+        },
+        "LoopItemParamName": "Item"
+      },
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.ProcessInstanceCommand, ServerDesignerCommon",
+          "ProcessInstanceId": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=Item.ID"
+          },
+          "OperateType": 301
+        }
+      ]
+    }
+  ],
+  "Name": "清空数据"
+}
